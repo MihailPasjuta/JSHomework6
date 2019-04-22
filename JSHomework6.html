@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	</head>
+<body>
+<script>
+	//////1 задание
+	var arr = [2, -5, 1, -2, 0, -3, 2, 14];
+	var arr1_1=arr.filter(function(number){
+		return number>0;
+	});
+	//console.log(arr1_1);
+	
+	var arr1_2=arr1_1.map(function(number){
+		return Math.sqrt(number);
+	});
+	console.log(arr1_2);
+	/////2 задание
+	var arr2 = [4, 3, 5, 5,-7, 0, 4, 8, 6];
+	var k=arr2.indexOf(0);
+	arr2.splice(k,arr2.length);
+	
+	var result=arr2.reduce(function(sum, current){
+	return sum+current;
+	},0);
+	console.log(result);
+	////3 задание
+	function summArguments(){
+		var summ=0;
+		for(var i=0;i<arguments.length;i++)
+		{
+			summ=summ+arguments[i];
+		}
+		return summ;
+	}
+	console.log(summArguments(2,4,6,4,4,-10));
+</script>
+</body>
